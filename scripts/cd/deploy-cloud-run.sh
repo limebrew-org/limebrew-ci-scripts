@@ -10,7 +10,7 @@ gcloud_list_image(){
 
 #? Push image to cloud run
 gcloud_deploy_cloud_run(){
-    gcloud run deploy $SERVICE_NAME --region $GCLOUD_LOCATION --image $GCR_IMAGE_NAME_WITH_TAG --allow-unauthenticated --set-env-vars $ENVS --service-account $DEPLOYMENT_SERVICE_ACCOUNT
+    gcloud run deploy $SERVICE_NAME --region $GCLOUD_LOCATION --image $GCR_IMAGE_NAME_WITH_TAG --allow-unauthenticated --set-env-vars $ENVS --service-account $GCLOUD_DEPLOYMENT_SERVICE_ACCOUNT
 }
 
 gcloud_list_image
