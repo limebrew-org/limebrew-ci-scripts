@@ -19,6 +19,7 @@ gcloud_set_image_tag() {
 
 #? Build the docker image and set tag
 gcloud_docker_build(){
+    echo "GCR_IMAGE_NAME=$GCR_IMAGE_NAME"
     sudo docker build --no-cache -t $SERVICE_IMAGE_NAME .
     sudo docker tag $SERVICE_IMAGE_NAME $GCR_IMAGE_NAME:$TAG_NAME
 }
